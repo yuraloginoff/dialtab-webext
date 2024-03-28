@@ -1,0 +1,28 @@
+{
+  "name": "Dial Tab",
+  "description": "Override the NEW TAB page with your favorite links grouped in lists.",
+  "version": "0.1",
+  "manifest_version": 3,
+  "chrome_url_overrides": {
+    "newtab": "html/index.html"
+  },
+  "icons": {
+    "16": "icons/icon_16.png",
+    "32": "icons/icon_32.png",
+    "48": "icons/icon_48.png",
+    "128": "icons/icon_128.png"
+  },
+
+  "permissions": ["bookmarks", "storage"],
+
+  "options_ui": {
+    "page": "html/options.html",
+    "open_in_tab": true
+  },
+
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "arpo@duck.com"    }
+  }
+  
+}

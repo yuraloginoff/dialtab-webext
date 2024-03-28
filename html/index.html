@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>New Tab</title>
+  <link rel="stylesheet" href="../css/index.css">
+  <link rel="shortcut icon" href="../icons/icon_32.png" type="image/png">
+</head>
+<body>
+  <div id="container"></div>
+
+  <a href="#" id="settings">settings</a>
+
+  <script id="groups-template" type="x-tmpl-mustache">
+    {{#groups}}
+    <div class="group">
+      <p class="title">{{title}}</p>
+      <ul>
+        {{#children}}
+        <li>
+          <a href="{{url}}"><img src="{{favicon}}" width="18"></a>
+          <a href="{{url}}" class="textlink">{{title}}</a>
+        </li>
+        {{/children}}
+      </ul>
+    </div>
+    {{/groups}}
+  </script>
+  
+  <script type="module" src="../js/index.js"></script>
+</body>
+</html>
